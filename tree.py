@@ -68,7 +68,8 @@ class TreeEditor:
                         self.combinations_of_trees.append(new_trees)
                     start_coord = el_coord
         if combinations_number:
-            return self.combinations_of_trees[:combinations_number]
+            slice_list = self.combinations_of_trees[:combinations_number]
+            self.combinations_of_trees = slice_list
         return self.combinations_of_trees
 
     def to_json(self) -> str:
